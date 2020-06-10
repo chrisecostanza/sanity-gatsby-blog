@@ -7,7 +7,7 @@ import GraphQLErrorList from '../components/graphql-error-list'
 import SEO from '../components/seo'
 import Layout from '../containers/layout'
 
-import {responsiveTitle1} from '../components/typography.module.css'
+import styles from '../components/layout.module.css'
 
 export const query = graphql`
   query ArchivePageQuery {
@@ -19,9 +19,9 @@ export const query = graphql`
         node {
           id
           publishedAt
-          mainImage {
-            ...SanityImage
-            alt
+          categories {
+            id
+            title
           }
           title
           _rawExcerpt
@@ -49,9 +49,10 @@ const ArchivePage = props => {
 
   return (
     <Layout>
-      <SEO title='Archive' />
+      <SEO title='News & Insights' />
       <Container>
-        <h1 className={responsiveTitle1}>Archive</h1>
+        <p className={styles.subHeader}>Goings-on at Tensure</p>
+        <h1>News & Insights</h1>
         {postNodes && postNodes.length > 0 && <BlogPostPreviewGrid nodes={postNodes} />}
       </Container>
     </Layout>

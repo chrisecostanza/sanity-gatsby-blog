@@ -21,7 +21,7 @@
   composes: root;
 }
 
-.leadMediaThumb {
+/* .leadMediaThumb {
   position: relative;
   padding-bottom: 66.666%;
   background: var(--color-very-light-gray);
@@ -34,38 +34,78 @@
     height: 100%;
     object-fit: cover;
   }
+} */
+
+.insightContainer {
+  padding: 26px 36px;
 }
 
-.text {
-  /* empty */
-}
-
-.title {
-  @media (hover: hover) {
-    @nest .root:hover & {
-      text-decoration: underline;
-    }
-  }
-
-  @media (--media-min-medium) {
-    @nest .inList & {
-      margin-top: 0;
-    }
-  }
-}
-
-.excerpt {
-  @nest & p {
-    margin: 0.5em 0;
-  }
-
-  @nest & strong {
-    font-weight: 600;
-  }
+.insightCategory {
+  background: linear-gradient(#95D5D4, #DDDFE4);
 }
 
 .date {
-  font-size: var(--font-small-size);
-  line-height: var(--font-small-line-height);
-  color: var(--color-gray);
+  font-family: var(--font-family-titles);
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 1.1;
+  color: var(--color-dark-blue);
+  letter-spacing: 2px;
+}
+
+.title {
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 1.1;
+  color: var(--color-dark-blue);
+  letter-spacing: 2.3px;
+  text-transform: uppercase;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  /* @media (hover: hover) {
+    @nest .root:hover & {
+      text-decoration: underline;
+    }
+  } */
+
+  /* @media (--media-min-medium) {
+    @nest .inList & {
+      margin-top: 0;
+    }
+  } */
+}
+
+.excerpt p {
+  font-size: 17px;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+}
+
+.readMore {
+  font-size: 14px;
+  font-family: var(--font-family-heading);
+  color: var(--color-dark-blue);
+  text-transform: uppercase;
+  letter-spacing: 1.31px;
+  position: relative;
+  display: inline-flex;
+}
+
+.readMore::after {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  left: 3px;
+  width: 40%;
+  height: 3px;
+  background-color: var(--color-tuscany);
+  transition: all .3s;
+}
+
+.readMore:hover::after {
+  left: 0;
+  width: 100%;
+  transition: all .3s;
 }

@@ -2,11 +2,11 @@
 
 .root {
   box-sizing: border-box;
-  max-width: 960px;
-  padding: 1.5em;
+  max-width: 1200px;
+  padding: 20px;
   margin: 0 auto;
 
-  @media (--media-min-small) {
-    padding: 2em;
-  }
+  /* @media (--media-max-small) {
+    padding: 20px;
+  } */
 }

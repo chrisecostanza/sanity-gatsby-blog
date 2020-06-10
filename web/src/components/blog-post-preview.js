@@ -6,7 +6,6 @@ import {imageUrlFor} from '../lib/image-url'
 import PortableText from './portableText'
 
 import styles from './blog-post-preview.module.css'
-import {responsiveTitle3} from './typography.module.css'
 
 function BlogPostPreview (props) {
   return (
@@ -14,7 +13,7 @@ function BlogPostPreview (props) {
       className={props.isInList ? styles.inList : styles.inGrid}
       to={getBlogUrl(props.publishedAt, props.slug.current)}
     >
-      <div className={styles.leadMediaThumb}>
+      {/* <div className={styles.leadMediaThumb}>
         {props.mainImage && props.mainImage.asset && (
           <img
             src={imageUrlFor(buildImageObj(props.mainImage))
@@ -25,15 +24,19 @@ function BlogPostPreview (props) {
             alt={props.mainImage.alt}
           />
         )}
-      </div>
-      <div className={styles.text}>
-        <h3 className={cn(responsiveTitle3, styles.title)}>{props.title}</h3>
+      </div> */}
+      <div className={`${styles.insightContainer} ${styles.insightCategory}`}>
+        {props.categories.map(category => (
+          <p key={category.id}>{category.title}</p>
+        ))}
+        <div className={styles.date}>{format(props.publishedAt, 'MM-DD-YYYY')}</div>
+        <h3 className={styles.title}>{props.title}</h3>
         {props._rawExcerpt && (
           <div className={styles.excerpt}>
             <PortableText blocks={props._rawExcerpt} />
           </div>
         )}
-        <div className={styles.date}>{format(props.publishedAt, 'MMMM Do, YYYY')}</div>
+        <p className={styles.readMore}>read more</p>
       </div>
     </Link>
   )

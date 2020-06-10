@@ -10,6 +10,40 @@
   }
 }
 
+.subHeader {
+  color: var(--color-tuscany);
+  font-family: var(--font-family-titles);
+  font-size: 24px;
+  line-height: 1.1;
+  letter-spacing: 2.31px;
+  margin-bottom: 0;
+}
+
+h1, h2 {
+  font-family: var(--font-family-headings);
+  font-size: 48px;
+  line-height: 1;
+  letter-spacing: 1.38px;
+  text-transform: uppercase;
+  color: var(--color-dark-blue);
+  -webkit-text-fill-color: var(--color-white); /* Will override color (regardless of order) */
+  -webkit-text-stroke-width: 1.75px;
+  -webkit-text-stroke-color: var(--color-dark-blue);
+  margin-top: 15px;
+  margin-bottom: 20px;
+}
+
+h3 {
+  font-family: var(--font-family-titles);
+  font-size: 24px;
+  line-height: 1;
+  letter-spacing: 2.3px;
+  text-transform: uppercase;
+  color: var(--color-dark-blue);
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
 .footer {
   border-top: 1px solid var(--color-very-light-gray);
 
