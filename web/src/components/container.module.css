@@ -6,7 +6,7 @@
   padding: 20px;
   margin: 0 auto;
 
-  /* @media (--media-max-small) {
-    padding: 20px;
-  } */
+  @media (--media-max-small) {
+    padding: 20px 35px;
+  }
 }

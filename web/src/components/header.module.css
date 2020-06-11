@@ -29,9 +29,10 @@
   border: none;
   background: none;
   margin: 0;
-  padding: 6px;
+  padding: 4px 4px 0 4px;
   outline: none;
   color: inherit;
+  line-height: 1;
 
   @media (--media-min-medium) {
     display: none;

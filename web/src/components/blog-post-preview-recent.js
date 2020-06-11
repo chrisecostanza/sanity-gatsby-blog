@@ -3,7 +3,7 @@ import BlogPostPreview from './blog-post-preview'
 
 import styles from './blog-post-preview-grid.module.css'
 
-function BlogPostPreviewHome (props) {
+function BlogPostPreviewRecent (props) {
   return (
     <div className={styles.root}>
       <ul className={styles.grid}>
@@ -18,8 +18,8 @@ function BlogPostPreviewHome (props) {
   )
 }
 
-BlogPostPreviewHome.defaultProps = {
+BlogPostPreviewRecent.defaultProps = {
   nodes: []
 }
 
-export default BlogPostPreviewHome
+export default BlogPostPreviewRecent

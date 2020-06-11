@@ -5,7 +5,7 @@ import {
   filterOutDocsWithoutSlugs,
   filterOutDocsPublishedInTheFuture
 } from '../lib/helpers'
-import BlogPostPreviewHome from '../components/blog-post-preview-home'
+import BlogPostPreviewRecent from '../components/blog-post-preview-recent'
 import Container from '../components/container'
 import GraphQLErrorList from '../components/graphql-error-list'
 import SEO from '../components/seo'
@@ -35,7 +35,6 @@ export const query = graphql`
       _id
     }
   }
-
   query IndexPageQuery {
     site: sanitySiteSettings(_id: { regex: "/(drafts.|)siteSettings/" }) {
       title
@@ -105,7 +104,7 @@ const IndexPage = props => {
         <p className={styles.subHeader}>Goings-on at Tensure</p>
         <h2>News & Insights</h2>
         {postNodes && (
-          <BlogPostPreviewHome
+          <BlogPostPreviewRecent
             nodes={postNodes}
           />
         )}
