@@ -26,11 +26,15 @@ h1, h2 {
   letter-spacing: 1.38px;
   text-transform: uppercase;
   color: var(--color-dark-blue);
-  -webkit-text-fill-color: var(--color-white); /* Will override color (regardless of order) */
+  -webkit-text-fill-color: transparent;
   -webkit-text-stroke-width: 1.75px;
   -webkit-text-stroke-color: var(--color-dark-blue);
   margin-top: 15px;
   margin-bottom: 20px;
+
+  @media (--media-max-small) {
+    font-size: 38px;
+  }
 }
 
 h3 {
